@@ -3,3 +3,20 @@ body {
     padding: 0;
     margin: 0;
 }
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.color-squares {
+    display: flex;
+    gap: 10px;
+}
+
+.color-square {
+    height: 100px;
+    width: 100px;
+    background: black;
+}

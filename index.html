@@ -6,27 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word Morph</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Word Morph</h1>
+    <div class="container">
+        <div class="title-area">
+            <h1>Colordle</h1>
+        </div>
 
-    <div id="game-area">
-        <form>
-            <label for="guess1"></label>
-        </form>
-        <form>
-            <label for="guess2"></label>
-        </form>
-        <form>
-            <label for="guess3"></label>
-        </form>
-        <form>
-            <label for="guess4"></label>
-        </form>
-        <form>
-            <label for="guess5"></label>
-        </form>
+        <div class="game-area">
+            <div class="color-squares">
+                <div class="color-square given-color-square">
+                </div>
+                <div class="color-square guessed-color-square">
+                </div>
+            </div>
+
+            <div class="color-pickers">
+                <div class="slide-container red-slider">
+
+                </div>
+                <div class="slide-container green-slider">
+
+                </div>
+                <div class="slide-container blue-slider">
+
+                </div>
+            </div>
+            <button>Submit</button>
+        </div>
     </div>
 </body>
 
