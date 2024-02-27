@@ -1,23 +1,19 @@
-var redSlider = document.getElementById("redSlider");
-var redOutput = document.getElementById("redOutput");
-redOutput.innerHTML = redSlider.value;
+red = 200
+yellow = 200
+blue = 200
+white = 200
+black = 0
 
-redSlider.oninput = function () {
-    redOutput.innerHTML = this.value;
+function calculateColor(red, blue, yellow, black, white) {
+    // Calculate RGB values
+    const calculatedRed = Math.round((red + yellow / 2 + white / 2) * (1 - black / 255));
+    const calculatedGreen = Math.round((blue + yellow / 2 + white / 2) * (1 - black / 255));
+    const calculatedBlue = Math.round((yellow + white / 2) * (1 - black / 255));
+
+    // Convert to hex format
+    const hexColor = `#${calculatedRed.toString(16).padStart(2, '0')}${calculatedGreen.toString(16).padStart(2, '0')}${calculatedBlue.toString(16).padStart(2, '0')}`;
+
+    return hexColor.toUpperCase();
 }
 
-var greenSlider = document.getElementById("greenSlider");
-var greenOutput = document.getElementById("greenOutput");
-greenOutput.innerHTML = greenSlider.value;
-
-greenSlider.oninput = function () {
-    greenOutput.innerHTML = this.value;
-}
-
-var blueSlider = document.getElementById("blueSlider");
-var blueOutput = document.getElementById("blueOutput");
-blueOutput.innerHTML = blueSlider.value;
-
-blueSlider.oninput = function () {
-    blueOutput.innerHTML = this.value;
-}
+console.log(calculateColor(200, 200, 200, 0, 150))

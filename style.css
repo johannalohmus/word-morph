@@ -18,7 +18,7 @@ body {
 .color-square {
     height: 100px;
     width: 100px;
-    background: black;
+    background: color-mix(in srgb, red, blue)
 }
 
 
